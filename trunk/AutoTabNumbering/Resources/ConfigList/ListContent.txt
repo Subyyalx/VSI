@@ -1,0 +1,208 @@
+b|BP - Business Processes|SeqLength: 2, SeqInput: Auto, SeqStart: 1, RemHyphen: True, IncHyphenAfterPre: True, Prefix: BP
+c|FR|
+c|JA|
+c|TM|
+c|LF|
+c|VA|
+b|MP - Manufacturing Process|SeqLength: 2, SeqInput: Auto, SeqStart: 1, RemHyphen: True, IncHyphenAfterPre: True, Prefix: MP
+c|JA|
+c|FR|
+b|QS - Quality System Document|SeqLength: 2, SeqInput: Auto, SeqStart: 1, RemHyphen: True, IncHyphenAfterPre: True, Prefix: QS
+c|JA|
+c|FR|
+c|TM|
+c|VA|
+b|TP - Test Procedure|SeqLength: 2, SeqInput: Auto, SeqStart: 1, RemHyphen: True, IncHyphenAfterPre: True, Prefix: TP
+c|FR|
+b|10 - Finished Goods Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 10
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|11 - Sterile Sub-Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 11
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|12 - Non--Sterile Packaged Sub-Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 12
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|13 - Sterile Packed Sub-Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 13
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|14 - Sub-Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 14
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|15 - PCB Assembly|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 15
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|20 - Mechanical Components (Purchased)|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 20
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|21 - Tubing (Purchased)|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 21
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|22 - Sterilization Cycle Specs|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 22
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|23 - Biological Component Non-Sterile|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 23
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|24 - Biological Component Sterile|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 24
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|25 - Manufactured Parts IN-House|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 25
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|30 - Electrical Component|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 30
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|31 - Cable and Wire|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 31
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|32 - Resistors|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 32
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|33 - Capacitor|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 33
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|34 - Micro Processors|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 34
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|40 - Label Stock|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 40
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|41 - Label Content|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 41
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|42 - Instructions for Use|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 42
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|43 - Instruction For Use (Distributed)|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 43
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|44 - Label Non Regulated|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 44
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|50 - Chemicals|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 50
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|51 - Adhesives|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 51
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|60 - Supplies|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 60
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|62 - Production Tools|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 62
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|70 - Packaging Materials|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 70
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|80 - Software|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 80
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|81 - Quality System Software|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 81
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|82 - Equipment Software|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 82
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|92 - Refurbished Items|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 92
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|
+b|9XXX - Expensed Items|SeqLength: 2, SeqInput: User, SeqStart: 1, RemTab: True, Prefix: 9
+c|IP|SeqInput: None
+c|RT|
+c|TV|
+c|DM|
+c|RS|

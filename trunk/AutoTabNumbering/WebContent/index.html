@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+<META HTTP-EQUIV="Expires" CONTENT="-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script type="text/javascript" src="js/lib/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="js/lib/knockout-3.2.0.js"></script>
+<script type="text/javascript" src="js/lib/knockout-animate.js"></script>
+<script type="text/javascript" src="js/lib/knockout.mapping-latest.debug.js"></script>
+<script type="text/javascript" src="js/lib/knockout.validation.js"></script>
+<script type="text/javascript" src="js/lib/sammy-latest.min.js"></script>
+<script type="text/javascript" src="js/lib/system.js"></script>
+<script type="text/javascript" src="js/navigation.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/lib/require.js"></script>
+<script type="text/javascript" src="js/lib/amplify.min.js"></script>
+<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/lib/patch.js"></script>
+
+<!-- <script type="text/javascript" src="js/lib/jquery.jqGrid.src.js"></script>
+<script type="text/javascript" src="js/lib/grid.locale-en.js"></script>
+<script type="text/javascript" src="js/lib/ko.gridBinding.js"></script>
+-->
+
+<script type="text/javascript" src="js/lib/chosen.jquery.js"></script>
+
+
+<script type="text/javascript" src="js/lib/ko.chosenBinding.js"></script>
+
+<script type="text/javascript" src="viewmodels/IndexPageViewModel.js"></script>
+
+<title>Tab Autonumber</title>
+
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/lib/KoGrid.css" />
+<link rel="stylesheet" href="css/lib/bootstrap.css" />
+<link rel="stylesheet" href="css/lib/jquery-ui-1.8.1.custom.css" />
+<link rel="stylesheet" href="css/lib/ui.jqgrid.css" />
+<link rel="stylesheet" href="css/lib/chosen.css" />
+
+<link rel="icon" href="images/favicon.ico" />
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+
+
+		<div id="content">
+			<!-- <div class="nav_screen">
+				<a href="#" id="back_screen_btn" data-dir="prev" title="Back">
+				<img src="images/backward.png" />
+			</a>
+			</div> -->
+
+			<div id="main">
+				<div id="main_header">
+					<div id="logo">
+						<img src="images/vsi_logo.png" />
+					</div>
+
+				</div>
+
+				<div id="center_content" class="slider">
+					 <div class="breadcrumb_main">
+						<div class="breadcrumb_area"><h3>Create New Sub-Document</h3></div>
+					</div> 
+					<div class="ul">
+
+						<div class="li" id="screen0" data-screenid="initial_menu">
+							<div class='upper_content' id="scrollableUp">
+
+								<div id="workSpace" data-bind="skipChildBinding: true">							
+									<div id='mainPlaceHolder'
+										data-bind="template:{name:'empty_template' }"> </div>
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+				</div>
+				<!-- </div> -->
+
+
+
+			</div>
+			<!-- <div class="nav_screen">
+				<a href="#" id="forward_screen_btn" data-dir="next" title="Save and Next"><img src="images/forward.png" />
+			</a>
+			</div> -->
+		</div>
+
+	</div>
+
+
+	<div class="modal fade" id="pleaseWaitDialog" data-backdrop="static"
+		data-keyboard="false" role="dialog" aria-labelledby="basicModal"
+		aria-hidden="true" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<!-- <div class="modal-header">
+					<h4>Loading. Please wait...</h4>
+				</div> -->
+				<div class="modal-body">
+					<!-- <div class="progress progress-striped active">
+						<div class="progress-bar" style="width: 100%;">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div> -->
+					<img src="images/loading1.gif" />
+					<span id="pleaseWaitMessage" style="margin-left: 10px; font-size: 15px;"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div data-bind="skipChildBinding: true">
+		<div id='reverseConfirmationDialogTemplatePlaceHolder' 
+		data-bind="template:{name:'reverseConfirmationDialogTemplate'}"></div>
+	</div>
+		
+	<div data-bind="skipChildBinding: true">
+		<div id='lookupDialogTemplatePlaceHolder' data-bind="template:{name:'lookupDialogTemplate' }"></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!-- Template for single field. It doesn't need to be modified. -->
+<script type="text/html" id="createItemInputTemplate"> 
+<div class="form-group" data-bind = "'visible': visible">
+
+
+	<div>
+		<label class= "col-sm-4 control-label" style="color:#011381;font-family: 'ProximaNovaReg','Lucida Sans Unicode','Lucida Grande','Lucida Sans',Arial,sans-serif;" data-bind="text: label, attr: {'title': tooltip}"></label>
+		<span data-bind="visible: required" ></span>
+	</div>
+
+	<div class="col-sm-6">
+	
+	<!-- ko if: type == "text" -->	
+		<input type="text" class="form-control" data-bind="valueUpdate: 'blur', attr: {'id': id,
+			 'placeholder':placeholder, 'title': tooltip, 'tabindex': tabIndex}, 'value': value,
+			 event: {'change': onChange}, css: cssClasses, enable: enabled" >
+	<!-- /ko -->
+
+	<!-- ko if: type == "list" -->	
+		<select class="form-control chosen" data-bind="attr: {'id': id, 'title': tooltip, 'tabindex': tabIndex}, 
+			'options': options, 'selectedOptions': selectedOptions, event: {'change': onChange},
+			css: cssClasses, enable: enabled, chosen: {}">
+		</select>
+	<!-- /ko -->
+
+	<!-- ko if: type == "multilist" -->	
+		<select class="form-control chosen" multiple="true" data-bind="attr: {'id': id, 'title': tooltip,
+			'tabindex': tabIndex}, 
+			'options': options, 'selectedOptions': selectedOptions, event: {'change': onChange},
+			 chosen: {}, css: cssClasses, enable: enabled">
+		</select>
+	<!-- /ko -->
+
+	<!-- ko if: type == "date" -->	
+		<input type="date" class="form-control" data-bind="attr: {'id': id, 'title': tooltip,
+			'tabindex': tabIndex},
+			'value': value, event: {'change': onChange}, css: cssClasses, enable: enabled">
+	<!-- /ko -->
+
+	<!-- ko if: type == "checkbox" -->	
+		<input type="checkbox" data-bind="attr: {'id': id, 'title': tooltip, 'tabindex': tabIndex},
+		    'checked': checked,
+			event: {'change': onChange}, css: cssClasses, enable: enabled">
+	<!-- /ko -->
+
+	<!-- ko if: type == "button" -->	
+		<button type="button" class="btn btn-default" data-bind="attr: {'id': id, 'tabindex': tabIndex,
+			'title': tooltip }, 'text': value, event: {'click': onClick},
+			css: cssClasses, enable: enabled"></button>
+	<!-- /ko -->
+
+	<!-- ko if: type == "buttonGroup" -->
+		<div data-bind="foreach: buttons">
+			<button type="button" class="btn btn-default" data-bind="attr: {'id': id, 'tabindex': tabIndex,
+				'title': tooltip }, 'click': onClick, 'text': defaultValue, 
+				event: {'click': onClick}, css: cssClasses"></button>
+		</div>
+	<!-- /ko -->
+
+	<!-- ko if: type == "radioGroup" -->
+		<div data-bind="foreach: buttons">
+			<label data-bind="attr: {'title': tooltip}">
+				<input type="radio" data-bind="attr: {'value': defaultValue, tabindex: tabIndex}, 
+					checked: $parent.selectedRadio" />
+				<span data-bind="text: text"></span>
+			</label>
+		</div>
+	<!-- /ko -->
+
+	<!-- ko if: type == "checkboxGroup" -->
+		<div data-bind="foreach: buttons, css: cssClasses">
+			<label data-bind="attr: {'title': tooltip}">
+				<input type="checkbox" data-bind="attr: {'value': defaultValue, tabindex: tabIndex},
+					'checked': checked" />
+				<span data-bind="text: defaultValue"></span>
+			</label>
+		</div>
+	<!-- /ko -->
+	
+	<!-- ko if: type == "file" -->	
+		<input type="file" class="" data-bind="attr: {'id': id, 'title': tooltip , 'tabindex': tabIndex},
+			 event: {'change': onChange}, css: cssClasses, enable: enabled"></button>
+	<!-- /ko -->
+
+
+	<!-- ko if: type == "lookup" -->	
+		<select class="form-control chosen" multiple="true" data-bind="attr: {'id': id, 'title': tooltip,
+			'tabindex': tabIndex}, 
+			'options': options, 'selectedOptions': selectedOptions, event: {'change': onChange},
+			 chosen: {}, css: cssClasses, enable: enabled">
+		</select>
+	
+		
+
+	<!-- /ko -->
+
+
+	</div>
+
+	<div class="col-sm-2">
+
+		<!-- ko if: type == "lookup" -->
+			<button type="button" class="btn btn-default" data-bind="attr: {}, 
+				event: {'click': lookupClicked},
+				css: cssClasses, enable: enabled"><img src="images/search.png"/></button>
+		<!-- /ko -->
+
+
+		<span data-bind="foreach: inlineButtons">
+			<button type="button" class="btn btn-default" data-bind="attr: {'id': id, 
+				'title': tooltip }, 'text': defaultValue, event: {'click': onClick},
+				css: cssClasses, enable: enabled"></button>
+		</span>
+	</div>
+	</div>
+</div>
+</div>
+ </script>
+ 
+ 
+<script type="text/html" id="lookupDialogTemplate">
+		<div class="modal fade container" id="lookupDialog"
+			data-backdrop="static" data-keyboard="true" role="dialog"
+			aria-labelledby="basicModal" aria-hidden="true" tabindex="-1">
+			<div class="modal-dialog" id="lookupDialog">
+				<div class="modal-content container-fluid">
+					<div class="modal-header">
+						 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span>
+							<span class="sr-only">Close</span></button>
+						<h4 data-bind="text: heading"></h4>
+					</div>
+					<div class="modal-body container-fluid">
+						<div id="lookupControls " class="col-md-12 container-fluid">
+							<div class="col-md-10">
+								<input type="text" id="lookupString" class="form-control"
+									data-bind="value: searchString" />
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-primary"
+									data-bind="event: {click: lookupSearchClicked}">
+									Search</button>
+							</div>
+						</div>
+						
+						<div class="col-md-11 container-fluid">
+							<br/>
+							<span class="popup_error" data-bind="text: errorMessage"></span>
+						</div>
+						<br/><br/>
+						<div id="lookup-results" class="container-fluid col-md-12">
+							<table id="lookup-table" class="col-md-12 container-fluid" style="width: 100%">
+								<thead>
+									<tr data-bind="foreach: lookupColumns">
+										<th data-bind="text: label"></th>
+									</tr>
+								</thead>
+								<tbody data-bind="foreach: { data: lookupResults, as: 'resultRow'}">
+									<tr data-bind="foreach: { data: $parent.lookupColumns, as: 'column'}">
+										<td>
+											<!-- in td -->
+											<!-- ko if: $index() == $root.clickableColumn -->
+												<a class="lookup_select_link" data-bind= "click: function(data, event) {$root.selectColumnClicked(data, event, resultRow)}">
+													<span data-bind="text: resultRow[column.index]"></span>
+												</a>
+											<!-- /ko -->
+										
+											<!-- ko if: $index() != $root.clickableColumn -->
+													<span data-bind="text: resultRow[column.index]"></span>
+											<!-- /ko -->
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							
+						</div>
+						<div id="lookup-results-count"  class="container-fluid col-md-12" data-bind="text: resultCount"></div>
+						<br />
+					</div>
+				</div>
+
+		</div>
+		</script>

@@ -1,0 +1,26 @@
+log4j.rootLogger=DEBUG,R
+
+log4j.appender.R=org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.DatePattern='.'yyyy-MM-dd
+log4j.appender.R.File=${catalina.home}/logs/AutoTabNumbering.log
+log4j.appender.R.layout=org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern=%d %-5p %c - %m%n
+
+agileUrl=http://agile933.xavor.com:7001/Agile/
+
+Config.ListName=Auto Tab Numbering List
+Config.ListName=Auto Tab Numbering
+Config.PropertyDelim=,
+Config.KeyValueDelim=:
+Config.SeqLength=SeqLength
+Config.Name=name
+Config.Prefix=Prefix
+Config.SeqInput=SeqInput
+Config.SeqInput.Auto=Auto
+Config.SeqInput.User=User
+Config.SeqInput.None=None
+Config.StartValue=SeqStart
+Config.RemoveHyphen=RemHyphen
+Config.RemoveTab=RemTab
+Config.IncludeHyphenAfterPrefix=IncHyphenAfterPre
+

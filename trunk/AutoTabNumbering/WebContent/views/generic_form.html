@@ -1,0 +1,27 @@
+
+<script type="text/html" id="createItemsTemplate"> 
+
+<div id="genericForm" class="container-fluid" data-bind="fadeVisible: visible, duration: 1000">
+
+<form class="form-horizontal" role="form" id="multiPartForm" >
+
+	<!-- Form heading. Modify as needed -->
+	<div class="col-md-12">
+		<div class="form-group">
+			<label class="col-sm-12"><h4>Create New Item</h4></label>
+		</div>
+	</div>
+	
+	<!-- Fields will be rendered in this div container. -->
+	<div data-bind="template: { name: 'createItemInputTemplate', foreach: fields, as: 'field'}">
+	</div>
+
+</form>
+
+</div>
+
+ </script>
+
+
+
+
